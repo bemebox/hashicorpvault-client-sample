@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: vault-client-service
+  cloud:
+    vault:
+      authentication: TOKEN
+      uri: http://localhost:8200
+      token: [TOKEN]
+      kv:
+        enabled: true
+        backend: secret       # KV backend name
+        default-context: demo # Default context, adjust as needed
+      config:
+        lifecycle:
+          enabled: true
+          lease-renewal-threshold: 0.20 # Automatically renew the lease when 20% of the lease time is remaining
+  config:
+    import: vault://
