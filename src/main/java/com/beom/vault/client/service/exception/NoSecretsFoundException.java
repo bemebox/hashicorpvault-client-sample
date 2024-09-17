@@ -1,20 +1,20 @@
 package com.beom.vault.client.service.exception;
 
 /**
- * Thrown when a resource mapping error occurs in the application.
+ * Thrown when no secrets found error occurs in the application.
  *
  * @author beom
- * @since: 2023/05/08
+ * @since 2024/09/17
  * @see RuntimeException
  */
-public class ResourceMapperException extends RuntimeException {
+public class NoSecretsFoundException extends RuntimeException {
 
 	/**
 	 * constructor
 	 *
 	 * @param msg - the message of the exception
 	 */
-	public ResourceMapperException(String msg) {
+	public NoSecretsFoundException(String msg) {
 		super(msg);
 	}
 
@@ -24,7 +24,7 @@ public class ResourceMapperException extends RuntimeException {
 	 * @param msg - the message of the exception
 	 * @param th  - the Throwable exception
 	 */
-	public ResourceMapperException(String msg, Throwable th) {
+	public NoSecretsFoundException(String msg, Throwable th) {
 		super(msg, th);
 	}
 }
