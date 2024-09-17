@@ -30,6 +30,11 @@ Basically clone the project from the remote repository to the local machine, usi
 $git clone [URL].git
 ```
 
+add the vault secret token in the secrets.yaml file
+```
+spring.cloud.vault.token=TOKEN
+```
+
 ### Hashicorp Vault Configuration
 You must have the hashicorp vault server installed and the key value secrets created, before calling the API.
 
